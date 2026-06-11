@@ -11,6 +11,7 @@
 - [x] Streamlit dashboard source exists.
 - [x] Monitoring summary exists.
 - [x] Simulated role activity log exists.
+- [x] Streamlit Community Cloud entrypoint and config exist.
 - [x] Local tests exist.
 
 ## Remaining For Real Project
@@ -20,5 +21,5 @@
 - [ ] Replace synthetic services with 211 Quebec or Montreal Open Data services.
 - [ ] Validate spatial joins against real geographies.
 - [ ] Run user testing with 2-3 non-technical users.
-- [ ] Decide whether to deploy to cloud.
+- [ ] Deploy to Streamlit Community Cloud and record the public app URL.
 - [ ] Prepare final report and presentation.

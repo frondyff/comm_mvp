@@ -15,6 +15,7 @@ team can monitor work through owners, outputs, blockers, and handoffs.
 | 2026-06-11 | Chloe | Integration lead | Verified local scripts and tests | README and tests | Cloud deployment optional | Prepare final demo script |
 | 2026-06-11 | Frondy | Geospatial / analytics lead | Enhanced maps with click-selected areas, click-selected services, radius filters, and category-level access tables | `src/comm_need_radar/dashboard/app.py` | Role activity log kept in docs/data instead of dashboard | Validate clicks with user testing |
 | 2026-06-11 | Mariam | AI / insight / presentation lead | Added local policymaker assistant for priority, gap, borough, and funding questions | `src/comm_need_radar/dashboard/app.py` | External RAG/LLM not required for MVP | Validate answers with policy users |
+| 2026-06-11 | Jessie | Dashboard / app lead | Added Streamlit Community Cloud entrypoint, config, and deployment instructions | `streamlit_app.py`, `.streamlit/config.toml`, README | No secrets or apt packages required | Deploy and record public app URL |
 
 ## Monitoring Rule
 

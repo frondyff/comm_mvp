@@ -43,6 +43,8 @@ comm_mvp/
   README.md
   pyproject.toml
   requirements.txt
+  streamlit_app.py
+  .streamlit/
   data/
     raw/
     processed/
@@ -95,10 +97,25 @@ The scripts write:
 ## Run Dashboard
 
 ```bash
-streamlit run src/comm_need_radar/dashboard/app.py
+streamlit run streamlit_app.py
 ```
 
 The app uses processed CSV files and does not need external credentials.
+
+## Deploy To Streamlit Community Cloud
+
+This repository is ready for Streamlit Community Cloud.
+
+Use these settings when creating the app:
+
+- Repository: `frondyff/comm_mvp`
+- Branch: `main`
+- Main file path: `streamlit_app.py`
+- Python version: `3.12`
+
+Cloud uses the root `requirements.txt` for Python dependencies and
+`.streamlit/config.toml` for app configuration. No secrets or external
+`apt-get` packages are required for the synthetic MVP.
 
 ## Run Tests
 

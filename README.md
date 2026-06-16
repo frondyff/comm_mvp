@@ -29,6 +29,10 @@ sample records with public census, boundary, and service-location data.
   - Frontline / Community View with postal-code/community search and
     clickable vulnerability profile cards.
   - Monitoring View.
+- A separate customizable React frontend prototype with Planner and Frontline
+  modes, MapLibre maps, vulnerability cards, card detail, and local policy chat.
+- Custom frontend upgrades for PDF handouts, synthetic polygon choropleth
+  layers, radius catchments, and scenario-style geospatial analysis.
 - Plain-language area summaries grounded in processed data.
 - Markdown docs and GitHub templates for team monitoring.
 - Lightweight standard-library tests that can run without pytest.
@@ -44,6 +48,7 @@ comm_mvp/
   pyproject.toml
   requirements.txt
   streamlit_app.py
+  frontend/
   .streamlit/
   data/
     raw/
@@ -101,6 +106,29 @@ streamlit run streamlit_app.py
 ```
 
 The app uses processed CSV files and does not need external credentials.
+
+## Run Custom Frontend
+
+The `frontend/` directory contains the recommended production-oriented UI stack:
+Vite, React, TypeScript, Tailwind CSS, MapLibre GL JS, and deck.gl-ready
+dependencies. I used Vite here because the patched secure Next.js release
+requires Node 20.9+, while this repo currently runs Node 18.19. The frontend
+reads the same processed CSV outputs copied into `frontend/public/data/`.
+The synthetic polygon layer lives at `frontend/public/geo/areas.geojson`; replace
+it with real boundary GeoJSON using the same `area_id` keys when public
+geography is ready.
+
+```bash
+cd frontend
+npm install
+npm run dev
+```
+
+Use the localhost URL printed in the terminal, usually `http://localhost:5173`.
+
+Use Streamlit for the current cloud-ready MVP. Use the custom frontend when the
+project needs more control over interaction design, map behavior, routing, and
+component-level UX.
 
 ## Deploy To Streamlit Community Cloud
 
